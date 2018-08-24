@@ -11,7 +11,7 @@ import ShoppingCart from './components/Cart';
 
 class App extends Component {
   componentDidMount() {
-    this.props.getItems(items.items);
+    this.props.getItems();
   }
   render() {
 
@@ -40,7 +40,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getItems: bindActionCreators(ActionCreators.getItems, dispatch),
+  getItems: bindActionCreators(ActionCreators.fetchData, dispatch),
   buyItem: bindActionCreators(ActionCreators.buyItem, dispatch),
   returnOneItem: bindActionCreators(ActionCreators.returnOneItem, dispatch),
   returnAllItems: bindActionCreators(ActionCreators.returnAllItems, dispatch),

@@ -1,4 +1,5 @@
 import * as ActionTypes from '../actionTypes/actionTypes';
+import * as db from '../config/firebase';
 
 export const getItems = data => ({
     type: ActionTypes.GET_ITEMS,
@@ -24,3 +25,9 @@ export const emptyCart = (data) => ({
     type: ActionTypes.EMPTY_CART,
     payload: data
 });
+
+export const fetchData = () => dispatch => {
+    db.default.firebase_.database().ref().child('items').once('value').then(snapshot=>snapshot.val()).then(res=>{
+    dispatch(getItems(res)); 
+    });
+};
