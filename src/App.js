@@ -5,14 +5,25 @@ import * as ActionCreators from './actionCreators/actionCreators';
 import items from './data.json';
 import './App.css';
 
+import Header from './components/Header';
+import GroceryList from './components/GroceryList';
+import ShoppingCart from './components/Cart';
+
 class App extends Component {
   componentDidMount() {
     this.props.getItems(items.items);
   }
   render() {
+
+    let {grocery} = this.props;
+
     return (
       <div className="App">
-        
+        <Header/>
+        <main>
+          <GroceryList grocery={grocery}/>
+          <ShoppingCart cartItems={[]}/>
+        </main>
       </div>
     );
   }
