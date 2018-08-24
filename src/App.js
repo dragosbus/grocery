@@ -15,7 +15,7 @@ class App extends Component {
   }
   render() {
 
-    let {grocery, shoppingCart, buyItem, returnOneItem, returnAllItems} = this.props;
+    let {grocery, shoppingCart, buyItem, returnOneItem, returnAllItems, emptyCart} = this.props;
 
     return (
       <div className="App">
@@ -26,6 +26,7 @@ class App extends Component {
             cartItems={shoppingCart} 
             returnOneItem={returnOneItem} 
             returnAllItems={returnAllItems}
+            emptyCart={emptyCart}
           />
         </main>
       </div>
@@ -42,7 +43,8 @@ const mapDispatchToProps = dispatch => ({
   getItems: bindActionCreators(ActionCreators.getItems, dispatch),
   buyItem: bindActionCreators(ActionCreators.buyItem, dispatch),
   returnOneItem: bindActionCreators(ActionCreators.returnOneItem, dispatch),
-  returnAllItems: bindActionCreators(ActionCreators.returnAllItems, dispatch)
+  returnAllItems: bindActionCreators(ActionCreators.returnAllItems, dispatch),
+  emptyCart: bindActionCreators(ActionCreators.emptyCart, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -28,6 +28,12 @@
              "price": 20,
              "cal": 170,
              "items": 10
+         },
+         {
+             "name": "milk",
+             "price": 5,
+             "cal": 70,
+             "items": 100
          }
      ]
  }
