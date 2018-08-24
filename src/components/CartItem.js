@@ -6,6 +6,7 @@ const CartItem = props => (
         <p>{props.name}</p>
         <p>{props.counter}</p>
         <button onClick={props.returnOneItem}>Return one item</button>
+        <button onClick={props.returnAllItems}>Return all items</button>
     </li>
 );
 

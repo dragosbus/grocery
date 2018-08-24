@@ -30,6 +30,9 @@ const shoppingCartReducer = (state = [], action) => {
                 action.payload.items += 1;
                 return state.filter(items=>items !== action.payload);
             }
+        case ActionTypes.RETURN_ALL_ITEMS:
+            action.payload.items += action.payload.counter;
+            return state.filter(item=>item!==action.payload);
         default:
             return state;
     }

@@ -8,7 +8,12 @@ const ShoppingCart = props => {
     props.cartItems.length > 0 ? (
       <ul className="cart-items">
         {props.cartItems.map((item, i) => (
-          <CartItem key={item.name} {...item} returnOneItem={()=>props.returnOneItem(props.cartItems[i])}/>
+          <CartItem
+            key={item.name}
+            {...item}
+            returnOneItem={() => props.returnOneItem(props.cartItems[i])}
+            returnAllItems={() => props.returnAllItems(props.cartItems[i])}
+          />
         ))}
       </ul>
     ) : (
