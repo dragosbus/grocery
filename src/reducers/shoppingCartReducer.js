@@ -21,6 +21,15 @@ const shoppingCartReducer = (state = [], action) => {
                 
                 return [...state];
             }
+        case ActionTypes.RETURN_ONE_ITEM:
+            if(action.payload.counter > 1) {
+                action.payload.counter -= 1;
+                action.payload.items += 1;
+                return [...state];
+            } else {
+                action.payload.items += 1;
+                return state.filter(items=>items !== action.payload);
+            }
         default:
             return state;
     }

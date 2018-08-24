@@ -17,6 +17,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  background: rgba(230, 228, 228, 0.397);
 }
 
 .grocery {
@@ -88,6 +89,14 @@ main {
   flex-wrap: wrap;
 }
 
+.shopping-cart > p {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 90%;
+  font-size: 1.6rem;
+}
+
 .shopping-cart h2 {
   margin-bottom: auto;
 }
@@ -100,8 +109,8 @@ main {
 }
 
 .btn {
-  border: none;
-  background: rgba(196, 199, 201, 0.76);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: rgba(236, 237, 240, 0.623);
   color: rgba(3, 3, 3, 0.822);
   padding: 1rem 2rem;
   border-radius: 5px;
@@ -126,6 +135,7 @@ main {
   border: 1px solid rgba(0, 0, 0, 0.15);
   margin: 1rem auto;
   padding: 1rem;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 660px) {

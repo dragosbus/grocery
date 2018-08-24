@@ -9,3 +9,8 @@ export const buyItem = item => ({
     type: ActionTypes.BUY_ITEM,
     payload: item
 });
+
+export const returnOneItem = item => ({
+    type: ActionTypes.RETURN_ONE_ITEM,
+    payload: item
+});
