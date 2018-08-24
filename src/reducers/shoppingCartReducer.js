@@ -33,6 +33,11 @@ const shoppingCartReducer = (state = [], action) => {
         case ActionTypes.RETURN_ALL_ITEMS:
             action.payload.items += action.payload.counter;
             return state.filter(item=>item!==action.payload);
+        case ActionTypes.EMPTY_CART:
+            action.payload.forEach(item => {
+                item.items += item.counter;
+            });
+            return [];
         default:
             return state;
     }

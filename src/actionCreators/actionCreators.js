@@ -19,3 +19,8 @@ export const returnAllItems = item => ({
     type: ActionTypes.RETURN_ALL_ITEMS,
     payload: item
 });
+
+export const emptyCart = (data) => ({
+    type: ActionTypes.EMPTY_CART,
+    payload: data
+});

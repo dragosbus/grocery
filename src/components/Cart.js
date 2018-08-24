@@ -7,6 +7,9 @@ const ShoppingCart = props => {
   let itemsList =
     props.cartItems.length > 0 ? (
       <ul className="cart-items">
+        <button className="btn" onClick={()=>props.emptyCart(props.cartItems)}>
+            Empty Cart
+        </button>
         {props.cartItems.map((item, i) => (
           <CartItem
             key={item.name}
