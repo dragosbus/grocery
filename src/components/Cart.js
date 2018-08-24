@@ -1,5 +1,5 @@
 import React from 'react';
-
+import CartItem from './CartItem';
 
 const ShoppingCart = props => {
 
@@ -8,6 +8,11 @@ const ShoppingCart = props => {
     return(
         <div className="shopping-cart">
             <h2>Shopping Cart</h2>
+            <ul>
+                {props.cartItems.map(item=>
+                    <CartItem key={item.name} {...item}/>
+                )}
+            </ul>
             <div className="cart-footer">
                 <p>Total Price: {totalPrice}</p>
             </div>

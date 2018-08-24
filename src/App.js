@@ -15,14 +15,14 @@ class App extends Component {
   }
   render() {
 
-    let {grocery} = this.props;
+    let {grocery, shoppingCart, buyItem} = this.props;
 
     return (
       <div className="App">
         <Header/>
         <main>
-          <GroceryList grocery={grocery}/>
-          <ShoppingCart cartItems={[]}/>
+          <GroceryList grocery={grocery} buyItem={buyItem}/>
+          <ShoppingCart cartItems={shoppingCart}/>
         </main>
       </div>
     );
@@ -30,11 +30,13 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  grocery: state.grocery
+  grocery: state.grocery,
+  shoppingCart: state.shoppingCart
 });
 
 const mapDispatchToProps = dispatch => ({
-  getItems: bindActionCreators(ActionCreators.getItems, dispatch)
+  getItems: bindActionCreators(ActionCreators.getItems, dispatch),
+  buyItem: bindActionCreators(ActionCreators.buyItem, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
