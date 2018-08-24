@@ -8,7 +8,7 @@ const ShoppingCart = props => {
     return(
         <div className="shopping-cart">
             <h2>Shopping Cart</h2>
-            <ul>
+            <ul className="cart-items">
                 {props.cartItems.map(item=>
                     <CartItem key={item.name} {...item}/>
                 )}

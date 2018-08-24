@@ -117,6 +117,17 @@ main {
   color: #fff;
 }
 
+.cart-items {
+  width: 100%;
+  padding: 1rem;
+}
+
+.cart-items li {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
 @media (min-width: 660px) {
   .grocery li {
     width: 45%;
