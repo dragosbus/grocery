@@ -1,0 +1,33 @@
+ {
+     "items": [{
+             "name": "cheese",
+             "price": 20,
+             "cal": 200,
+             "items": 50
+         },
+         {
+             "name": "bread",
+             "price": 10,
+             "cal": 100,
+             "items": 20
+         },
+         {
+             "name": "soda",
+             "price": 10,
+             "cal": 100,
+             "items": 30
+         },
+         {
+             "name": "skitlles",
+             "price": 10,
+             "cal": 170,
+             "items": 10
+         },
+         {
+             "name": "nachos",
+             "price": 20,
+             "cal": 170,
+             "items": 10
+         }
+     ]
+ }
